@@ -5,6 +5,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:shared/shared.dart';
 
 import '../controllers/payment_controller.dart';
+import 'package:localization/localization.dart';
 
 class PaymentPage extends StatefulWidget {
   final String title;
@@ -22,14 +23,16 @@ class _PaymentPageState extends ModularState<PaymentPage, PaymentController> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text(widget.title),
+        title: Text(
+          "paymentAppBar".i18n(),
+        ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Payment',
+              "titlePayment".i18n(),
               style: TextStyle(fontSize: 22),
             ),
             Observer(builder: (_) => Text(controller.value.toString())),

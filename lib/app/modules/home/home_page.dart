@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:localization/localization.dart';
 import 'package:shared/shared.dart';
 import 'home_controller.dart';
 
@@ -16,6 +17,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
 
   @override
   Widget build(BuildContext context) {
+    Localization.configuration();
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
